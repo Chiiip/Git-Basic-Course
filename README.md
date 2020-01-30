@@ -1,22 +1,10 @@
-# React 16.3 ~ 17.7 (alpha) presentation
+# Gatsby Presentation
 
-Presentation for the 10th React Salvador Meetup touching the following topics:
+Presentation for React Salvador Meetup about Gatsby.
 
--   Fiber
--   Async Rendering
--   Context API
--   createRef and fowardRef API
--   New lifecycles (getDerivedStateFromProps and getSnapshotBeforeUpdate)
--   StrictMode
--   Pointer Events
--   Profiler
--   React.memo
--   Code-Splitting Suspense
--   Hooks
-
-## [Preview here](https://dygufa.com/react16-features-presentation/dist/#0)
+## [Presentation here]()
 
 ## Run locally
 
-1. Download the repo: `git clone https://github.com/dygufa/react16-features-presentation.git`
+1. Download the repo: `git clone https://github.com/Chiiip/Apresentacao-Gatsby.git`
 2. Run `npm start` or `yarn start`
