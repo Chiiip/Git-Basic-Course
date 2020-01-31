@@ -1,5 +1,5 @@
 import { CodeSurfer } from "mdx-deck-code-surfer";
-import { Head, Notes, Appear } from "mdx-deck";
+import { Head, Appear } from "mdx-deck";
 
 export { default as theme } from "./theme";
 
@@ -10,13 +10,6 @@ export { default as theme } from "./theme";
 <span style={{fontSize:"2.5em", fontWeight: 'bold'}}>Criando páginas velozes para a web com <span style={{color: "#663399"}}>Gatsby</span></span>
 
 ## por Pedro Augusto
-
-<Notes>
-Boa noite, eu me chamo Pedro Augusto, trabalhei por 2 anos no 12º andar numa empresa chamada Solutis, sou desenvolvedor front-end e vim aqui apresentar o Gatsby para vocês.
-Durante o último ano, eu tive a oportunidade de trabalhar com Gatsby no backoffice de uma aplicação React que já está em produção, e aí eu pude aprender sobre o framework e é uma tecnologia com um potencial incrível
-e por isso eu me propus a apresentar sobre ela.
-
-</Notes>
 
 ---
 
@@ -30,25 +23,12 @@ e por isso eu me propus a apresentar sobre ela.
 </Appear>
  
 
-<Notes>
-O que é o Gatsby e como ele funciona, e uma comparação entre um app feito em Gatsby e um feito usando CRA ou outro framework SSR
-casos de uso, vantagens, desvantagens, por quê você deveria usar
-Funcionamento, plugins, estrutura do projeto, e características internas do Gatsby
-</Notes>
-
 ---
 
 <img style={{height: '30vh'}} src={require("file-loader!./assets/logo gatsby.svg")}/>
 
 SSG + framework React
 
-<Notes>
-O Gatsby é um SSG, sigla em inglês para gerador de sites estáticos, e também um framework React que permite a criação de páginas para
-a web, com o diferencial de o framework te entregar já prontas algumas otimizações que vão deixar o seu website mais rápido.
-Antes de detalhar as features e as coisas presentes no próprio Gatsby que garantem essas vantagens, eu gostaria de primeiro explicar
-como funciona a geração de páginas estáticas do Gatsby e o que essa geração de páginas tem de diferente de uma página feita com
-Create React App e com Next. Perguntar quem conhece ou já trabalhou com Next
-</Notes>
 ---
 exemplo prático #1
 ---
@@ -73,9 +53,6 @@ Next
 npm init -y
 
 npm install --save react react-dom next
-<Notes>
-- falar o que é e como um crawler funciona
-</Notes>
 ---
 <div style={{display: 'flex', flexDirection: 'column'}}>
 <img style={{height: '80vh', width: '80vw'}} src={require("file-loader!./assets/CSR.png")}/>
@@ -89,9 +66,6 @@ por Alex Grigoryan
 ---
 "Performance isn't optional, it's built-in"
 
-<Notes>
-Kyle Matthews, 2017, na ReactNext
-</Notes>
 ---
 <Appear>
     <h3>roda em um servidor de estáticos</h3>
@@ -109,15 +83,9 @@ Kyle Matthews, 2017, na ReactNext
 ---
 <img style={{height: '80vh', width: '80vw'}} src={require("file-loader!./assets/state-of-js-2019.png")}/>
 fonte: https://2019.stateofjs.com/overview
-<Notes>
-State of JS 2019, 21k de pessoas
-</Notes>
 ---
 <img style={{height: '80vh', width: '80vw'}} src={require("file-loader!./assets/investimento.png")}/>
 fonte: https://www.gatsbyjs.org/blog/2019-09-26-announcing-gatsby-15m-series-a-funding-round/
-<Notes>
-https://www.gatsbyjs.org/blog/2019-09-26-announcing-gatsby-15m-series-a-funding-round/
-</Notes>
 ---
 <img style={{height: '100vh', width: '40vw'}} src={require("file-loader!./assets/udemy-report.jpg")}/>
 ---
@@ -133,11 +101,6 @@ https://www.gatsbyjs.org/blog/2019-09-26-announcing-gatsby-15m-series-a-funding-
 <Appear>
 <h1 style={{color: 'coral'}}>Não!</h1>
 </Appear>
-<Notes>
-E aí vem a pergunta: Gatsby é a bala de prata que irá resolver todos os meus problemas e irá funcionar magicamente para qualquer coisa que
-eu faça? Não! Tendo isso em vista, e com base na opinião e experiências de outras pessoas que já usaram, eu trouxe as 3 perguntas que eu acho
-que devem ser feitas antes de se considerar usar Gatsby em uma aplicação React. E elas são:
-</Notes>
 ---
 SEO é importante?
 ex.: site de um produto, blog
@@ -155,12 +118,6 @@ seu conteúdo é muito dinâmico? ex.: aplicação interna
 <h2>CRA ou Next</h2>
 </Appear>
 
-<Notes>
-Aqui é bom destacar que apesar das funcionalidades do Gatsby não serem em sua maioria focadas para aplicações dinâmicas, nada impede que
-você use Gatsby no seu site/app que seja muito dinâmico para poder aproveitar. E aí eu falo por experiência própria, pois a única aplicação
-que eu já trabalhei em produção com Gatsby é um backoffice praticamente todo dinâmico, e a decisão de colocar Gatsby no projeto foi somente
-para 1 - ter uma performance melhor no carregamento das telas, 2 - ter a otimização de imagens estáticas usando o Gatsby-image
-</Notes>
 ---
 <h3>Desvantagens</h3>
 <Appear>
@@ -180,9 +137,6 @@ code-splitting e Link
 <h3>mobile</h3>
 <h3>dispositivos usando dados móveis</h3>
 </Appear>
-<Notes>
-IntersectionObserver e link rel="prefetch"
-</Notes>
 ---
 <iframe
     src="https://codesandbox.io/embed/l70jj9p58m?fontsize=14"
@@ -199,11 +153,6 @@ IntersectionObserver e link rel="prefetch"
 exemplo prático #3
 
 gatsby-image, integração com CMS
-<Notes>
-- falar sobre o Medium
-- falar sobre a Responsividade
-- falar sobre como só carrega quando está no viewport
-</Notes>
 ---
 
 # Perguntas
