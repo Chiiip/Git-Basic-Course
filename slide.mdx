@@ -4,191 +4,152 @@ import { Head, Appear } from "mdx-deck";
 export { default as theme } from "./theme";
 
 <Head>
-    <title>Gatsby e a Web</title>
+    <title>Git Crash Course</title>
 </Head>
 
-<span style={{fontSize:"2.5em", fontWeight: 'bold'}}>Criando páginas velozes para a web com <span style={{color: "#663399"}}>Gatsby</span></span>
+<span style={{fontSize:"2.5em", fontWeight: 'bold'}}>Git Crash Course</span>
 
 ## por Pedro Augusto
 
+###### conteúdo baseado no material traduzido pelo PauloGoncalvesBH
 ---
-
-# O que pretendo abordar
+# O que esse curso pretende abordar:
 
 
 <Appear>
-    <h3>o que é Gatsby</h3>
-    <h3>casos de uso</h3>
-    <h3>funcionamento</h3>
+    <h3>Noções gerais sobre o que é Git</h3>
+    <h3>Como usar o Git/Github: commits, merges, branches, stashes</h3>
+    <h3>Entendimento do processo de criação de commits</h3>
+    <h3><span style={{color: "#663399"}}>Git Flow</span></h3>
 </Appear>
  
 
 ---
 
-<img style={{height: '30vh'}} src={require("file-loader!./assets/logo gatsby.svg")}/>
+<img style={{height: '30vh'}} src={require("file-loader!./assets/git.png")}/>
 
-SSG + framework React
+Git
 
----
-exemplo prático #1
----
-Create React App
-
-npm install -g create-react-app
-
-npx create-react-app my-app
-
-npm start
----
-Gatsby
-
-npm install -g gatsby-cli
-
-gatsby new gatsby-site
-
-gatsby develop
----
-Next
-
-npm init -y
-
-npm install --save react react-dom next
----
-<div style={{display: 'flex', flexDirection: 'column'}}>
-<img style={{height: '80vh', width: '80vw'}} src={require("file-loader!./assets/CSR.png")}/>
-<h7>por Alex Grigoryan</h7>
-</div>
----
-<div style={{display: 'flex', flexDirection: 'column'}}>
-<img style={{height: '80vh', width: '80vw'}} src={require("file-loader!./assets/SSR.png")}/>
-por Alex Grigoryan
-</div>
----
-"Performance isn't optional, it's built-in"
-
----
 <Appear>
-    <h3>roda em um servidor de estáticos</h3>
-    <h3>geração de HTML</h3>
-    <h3>perfeito para conteúdo estático (preferencialmente)</h3>
-</Appear>
----
-<Appear>
-    <h3>otimização de imagens</h3>
-    <h3>code-splitting</h3>
-    <h3>pre-load de conteúdo</h3>
-    <h3>integração com CMS</h3>
-    <h3>comunidade crescente</h3>
-</Appear>
----
-<img style={{height: '80vh', width: '80vw'}} src={require("file-loader!./assets/state-of-js-2019.png")}/>
-fonte: https://2019.stateofjs.com/overview
----
-<img style={{height: '80vh', width: '80vw'}} src={require("file-loader!./assets/investimento.png")}/>
-fonte: https://www.gatsbyjs.org/blog/2019-09-26-announcing-gatsby-15m-series-a-funding-round/
----
-<img style={{height: '100vh', width: '40vw'}} src={require("file-loader!./assets/udemy-report.jpg")}/>
----
-[React](https://reactjs.org/)
-
-[Airbnb](https://airbnb.io/)
-
-[Figma](https://www.figma.com/)
-
-[Free Code Camp](https://guide.freecodecamp.org/)
----
-<h3>Gatsby é útil para tudo? </h3>
-<Appear>
-<h1 style={{color: 'coral'}}>Não!</h1>
-</Appear>
----
-SEO é importante?
-ex.: site de um produto, blog
-<Appear>
-<h2>Next ou Gatsby</h2>
-</Appear>
----
-pretende rodar em servidores estáticos?
-<Appear>
-<h2>CRA ou Gatsby</h2>
-</Appear>
----
-seu conteúdo é muito dinâmico? ex.: aplicação interna
-<Appear>
-<h2>CRA ou Next</h2>
+    <h3>Sistema de Controle de Versões (version control system)</h3>
+    <h3>Criado por Linus Torvalds</h3>
+    <h3>Permite a criação de <span style={{color: "#663399"}}>servidores Git</span></h3>
 </Appear>
 
 ---
-<h3>Desvantagens</h3>
+
+<img style={{height: '30vh'}} src={require("file-loader!./assets/github.png")}/>
+
+Github
+
 <Appear>
-<h3>não existe build incremental (ainda)</h3>
-<h3>acrescenta uma camada de complexidade ao código do seu projeto</h3>
-<h3>objetos window, localStorage e browser indisponíveis</h3>
-<h3>problemas com sites muito grandes (+50k de páginas)</h3>
+    <h3>Serviço que provê servidores Git (Git server as a service)</h3>
+    <h3>Gerenciamento e visualização de projetos</h3>
+    <h3>Comprado pela Microsoft em 2018</h3>
+    <img style={{height: '10vh'}} src={require("file-loader!./assets/gitlab.png")}/>
+    <img style={{height: '10vh'}} src={require("file-loader!./assets/bitbucket.png")}/>
+</Appear>
+
+---
+
+Git ≠ Github
+---
+
+Por que usar Git?
+
+<Appear>
+    <h3>Compartilhar e centralizar código</h3>
+    <h3>Rastreabilidade</h3>
+    <h3>Merge + resolução de conflitos</h3>
+    <h3>Distribuído</h3>
+    <h3>Code Review</h3>
+</Appear>
+
+---
+<img src={require("file-loader!./assets/usage.png")}/>
+
+###### fonte: https://www.openhub.net/repositories/compare
+---
+
+<img src={require("file-loader!./assets/multiplos_ambientes.png")}/>
+
+---
+git clone https://github.com/Chiiip/treinamento-git.git
+<img src={require("file-loader!./assets/clone_ambiente.png")}/>
+---
+
+<img src={require("file-loader!./assets/clone_vscode.png")}/>
+---
+
+<Appear>
+    <h3>O repositório já contém o arquivo Alice.txt</h3>
+    <h3>Vamos criar um novo arquivo, chamado Bob.txt</h3>
+    <h3>Bob.txt é untracked, e Alice.txt é tracked</h3>
+</Appear>
+
+---
+
+git status
+<img src={require("file-loader!./assets/bob_untracked.png")}/>
+
+<h3>Vamos adicionar Bob!</h3>
+---
+<img src={require("file-loader!./assets/add.png")}/>
+---
+git add Bob.txt
+
+para adicionar todos os arquivos: git add .
+
+<img src={require("file-loader!./assets/bob_added.png")}/>
+
+caso não queira manter Bob na staging area:
+
+git restore Bob.txt --staged
+---
+<img src={require("file-loader!./assets/commit.png")}/>
+---
+
+git commit -m "Adicionando Bob.txt"
+
+<img src={require("file-loader!./assets/bob_commit.png")}/>
+---
+Hora de atualizar o repositório remoto com o nosso repositório local!
+
+<Appear>
+<img src={require("file-loader!./assets/git_push.png")}/>
 </Appear>
 ---
-exemplo prático #2
-
-code-splitting e Link
+git push
+<img src={require("file-loader!./assets/vscode_push.png")}/>
 ---
-<h3>Bônus</h3>
 <Appear>
-<h3>progressive enhancement</h3>
-<h3>mobile</h3>
-<h3>dispositivos usando dados móveis</h3>
+<h4>O que é Git e o que é Github</h4>
+<h4>Development Environment e Remote Repository</h4>
+<h4>Como clonar um repositório</h4>
+<h4>Como adicionar um arquivo novo ao Git</h4>
+<h4>Como adicionar um arquivo novo ao Git</h4>
+<h4>Conceito de tracked e untracked</h4>
+<h4>Modificar um arquivo</h4>
+<h4>Monitorar status do Dev. Env (modified, staged, committed)</h4>
+<h4>Criar commits com os arquivos que você deseja</h4>
 </Appear>
 ---
-<iframe
-    src="https://codesandbox.io/embed/l70jj9p58m?fontsize=14"
-    width="800"
-    height="500"
-    style={{
-        border: 0,
-        borderRadius: "4px",
-        overflow: "hidden",
-    }}
-    sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-/>
----
-exemplo prático #3
+cheat sheet
+<Appear>
+<h4>
+git clone nomedorepositorio - clona um repositório remoto já existente
+</h4>
 
-gatsby-image, integração com CMS
----
-
-# Perguntas
-
----
-
-# Obrigado!
-
-<img style={{height: '50vh', width: '40vw'}} src={require("file-loader!./assets/gatsby-gif.gif")}/>
-
----
-fontes
-<div style={{fontSize: '13px'}}>
-
-https://gatsbyjs.org
-
-https://www.youtube.com/watch?v=GuvAMcsoreI
-
-https://www.youtube.com/watch?v=VoscwJ6MGsU
-
-https://www.youtube.com/watch?v=xC4Yq_mXvPM
-
-https://www.youtube.com/watch?v=Gtd-Ht-D0sg
-
-https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/
-
-https://dev.to/jameesy/gatsby-vs-next-js-what-why-and-when-4al5
-
-https://blog.logrocket.com/is-gatsby-really-that-great-e7b19c4c1c05/
-
-https://www.gatsbyjs.org/tutorial/blog-netlify-cms-tutorial/
-
-https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8
-
-https://segredo.dev/o-que-e-o-gatsbyjs/
-
-https://medium.com/techbloghotmart/o-que-%C3%A9-server-side-rendering-e-como-usar-na-pr%C3%A1tica-a840d76a6dca
-</div>
-
+<h4>
+git add nomedoarquivo - adiciona um arquivo à staging area
+</h4>
+<h4>
+git restore nomedoarquivo --staged - remove um arquivo da staging area
+</h4>
+<h4>
+git commit -m "Mensagem do Commit" - cria um commit com os arquivos presentes na staging area
+</h4>
+<h4>
+git push - envia os commits do repositório local para o repositório remoto
+</h4>
+</Appear>
